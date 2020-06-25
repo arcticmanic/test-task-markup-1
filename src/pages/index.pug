@@ -1,0 +1,73 @@
+extends layouts/base
+
+block content
+  main.main-content
+    .container
+      article
+        header.article-header
+          h1 Improving Education in 2020 🗳
+        section.article-image
+          h2.visually-hidden Article image
+          img(src="img/image-main.jpg" width=727 height=323 alt="")
+        aside.article-aside
+          section.election-block
+            h2.visually-hidden Candidate info
+            .election-block-candidate
+              .election-block-candidate-name Tyrone Fairfield
+              | 2020 Board of Education, Southwest City Schools District, OH
+            .election-block-day
+              .election-block-day-caption Election Day:
+              .election-block-day-date Nov 2nd, 2020
+              .election-block-estimation 26 days to go
+          section.donation-block
+            h2.visually-hidden Donation info
+            .donation-block-sum $25,324.56
+            .donation-block-count from 25 donations
+            .donation-block-bar
+              .donation-block-bar-done
+            .donation-block-bar-goal Goal: $40,000
+            .donation-block-bar-estimation 10 days to go
+            .donation-block-button
+              button.button.button-accent(type="button") Donate
+              button.button(type="button") + Follow
+              button.button(type="button") Volunteer
+        .article-content
+          section.article-contents
+            h2.visually-hidden Article contents
+            ul.list-unstyled
+              li.active #[button.active(type="button") About]
+              li #[button(type="button") Updates]
+              li #[button(type="button") Supporters]
+          section.article-content-block.active
+            h2 Background
+            p In 2016 state representative elections, 42% of all candidates faced no major party opponents. Filing to even run for local office is difficult. For example, in New York State there are over 100 pages in the election law guide and an additional 65 page 2018 update guide that pertain to the rules for filing to run for local office. Campaign fundraising compliance is also challenging.
+          section.article-content-block
+            h2 Updates
+            p In 2016 state representative elections, 42% of all candidates faced no major party opponents. Filing to even run for local office is difficult. For example, in New York State there are over 100 pages in the election law guide and an additional 65 page 2018 update guide that pertain to the rules for filing to run for local office. Campaign fundraising compliance is also challenging.
+          section.article-content-block
+            h2 Supporters
+            p In 2016 state representative elections, 42% of all candidates faced no major party opponents. Filing to even run for local office is difficult. For example, in New York State there are over 100 pages in the election law guide and an additional 65 page 2018 update guide that pertain to the rules for filing to run for local office. Campaign fundraising compliance is also challenging.
+          footer.article-footer
+            h2 Platform
+            h3 The issues
+            ul.list-unstyled.pill-filter
+              each val in main.issues
+                li.pill-filter-item
+                  a.pill-filter-link= val
+            h3 Organizations I support
+            ul.list-unstyled.pill-filter
+              each val in main.organizations
+                li.pill-filter-item
+                  a.pill-filter-link= val
+        section.article-aside.upcoming-events
+          .upcoming-events-caption
+            h2 Upcoming Events
+            a.upcoming-events-all(href="#") View all
+          .upcoming-events-block
+            .upcoming-events-left
+              .upcoming-events-day mon
+              .upcoming-events-date 24
+            .upcoming-events-right
+              .upcoming-events-title Main Street Meet and Greet
+              .upcoming-events-time 10:00 AM - 11:00 AM
+              .upcoming-events-address 125 Main St., Cherrytown, OH

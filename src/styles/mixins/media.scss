@@ -1,0 +1,7 @@
+@mixin respond-to($breakpoint, $type: 1) {
+  $type: if($type == 1, min-width, max-width);
+
+  @media screen and (#{$type}: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,40 @@
+// Variables
+
+$base-font: "Poppins", "Verdana", sans-serif;
+$base-font-size: 14px;
+$base-line-height: 24px;
+
+// Breakpoints
+
+$xlg: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+// Colors
+
+:root {
+  --main-black: #000;
+  --main-white: #fff;
+  --main-grey: #f4f4f4;
+  --main-grey-light: #e5e5e5;
+  --main-grey-dark: #4c4c4c;
+  --main-grey-dark-hover: #{lighten(#4c4c4c, 30%)};
+  --main-background: #fafafa;
+  --line-color: #ececec;
+  --ui-pink: #ff4778;
+  --ui-pink-hover: #{darken(#ff4778, 7.5%)};
+  --ui-pink-active: #{darken(#ff4778, 10%)};
+  --ui-purple: #6f36bc;
+  --ui-purple-hover: #{lighten(#956ccb, 7.5%)};
+  --ui-purple-active: #{lighten(#6f36bc, 15%)};
+  --ui-purple-light: #bea4e1;
+  --ui-pill-hover: #{darken(#f2eafe, 7.5%)};
+  --ui-pill-active: #{darken(#f2eafe, 10%)};
+  --ui-purple-light2: #f2eafe;
+  --ui-purple-light3: #f3f5fe;
+  --ui-bar-grey: #f0f0f0;
+  --ui-bar-green: #2acba5;
+  --ui-button-shadow: rgba(27, 225, 175, 0.16);
+  --ui-pink-dark: #d83863;
+}

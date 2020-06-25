@@ -1,0 +1,123 @@
+/* Global */
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: var(--main-black);
+  min-height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.pull-right {
+  margin-left: auto;
+}
+
+.pull-left {
+  margin-right: auto;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--main-background);
+
+  @include respond-to(575px, 2) {
+    background: none;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include respond-to($sm) {
+    max-width: 536px;
+  }
+
+  @include respond-to($md) {
+    max-width: 728px;
+  }
+
+  @include respond-to($lg) {
+    max-width: 952px;
+  }
+
+  @include respond-to($xlg) {
+    max-width: 1150px;
+  }
+}
+
+.button {
+  border: 1px solid var(--ui-purple);
+  border-radius: 99px;
+  background: none;
+  box-shadow: 0px 4px 8px var(--ui-button-shadow);
+  padding: 10px;
+  min-width: 160px;
+  cursor: pointer;
+  outline: none;
+  color: var(--ui-purple);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: var(--ui-purple-hover);
+  }
+
+  &:active,
+  &.active {
+    background-color: var(--ui-purple-active);
+  }
+
+  &-accent {
+    border: none;
+    background: var(--ui-pink);
+    color: var(--main-white);
+    font-size: 14px;
+    line-height: 21px;
+
+    &:hover,
+    &:focus {
+      background-color: var(--ui-pink-hover);
+    }
+
+    &:active,
+    &.active {
+      background-color: var(--ui-pink-active);
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.main-footer {
+  min-height: 99px;
+  width: 100%;
+  background: var(--main-grey);
+  display: flex;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include respond-to(767px, 2) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  li {
+    margin: 0 15px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--main-grey-dark);
+
+    &:hover,
+    &:focus {
+      color: var(--main-grey-dark-hover);
+    }
+
+    &:active,
+    &.active {
+      color: var(--main-grey-light);
+    }
+  }
+
+  @include respond-to(767px, 2) {
+    order: -2;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  @include respond-to(575px, 2) {
+    flex-wrap: wrap;
+    padding: 5px 0;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+  @include respond-to(575px, 2) {
+    margin-right: 0px;
+  }
+
+  li {
+    margin-left: 18px;
+
+    @include respond-to(767px, 2) {
+      margin: 0;
+    }
+  }
+
+  .icon {
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin: 0 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    &-fb {
+      background-image: url("../img/icon-fb.png");
+    }
+
+    &-tw {
+      background-image: url("../img/icon-tw.png");
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.3;
+    }
+
+    &:active,
+    &.active {
+      opacity: 0.15;
+    }
+  }
+
+  @include respond-to(767px, 2) {
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+  }
+}
+
+.copyright {
+  @include respond-to(767px, 2) {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+}

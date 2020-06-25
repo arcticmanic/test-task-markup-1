@@ -1,0 +1,15 @@
+header.main-header
+  .container
+    button(type="button").js-toggle-menu
+    .logo.pull-left
+      img(src="img/logo.svg" width="80" height="80" alt="Logo image")
+    nav.main-nav.pull-right
+      ul.list-unstyled
+        each val, i in header.nav
+          if i==1
+            li.active #[a()=val]
+          else
+            li #[a(href="#")=val]
+    a(href="#").user-pic
+      img(src="img/user-pic.png" width="40" height="40" alt="User image")
+

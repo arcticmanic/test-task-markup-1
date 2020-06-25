@@ -1,0 +1,157 @@
+.main-header {
+  background: var(--main-white);
+  display: flex;
+  min-height: 180px;
+  border-bottom: 1px solid var(--line-color);
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include respond-to(575px, 2) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include respond-to(575px, 2) {
+    min-height: auto;
+    border: none;
+  }
+}
+
+.main-nav {
+  font-weight: 600;
+
+  ul {
+    display: flex;
+
+    @include respond-to(575px, 2) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  li {
+    margin-right: 22px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.active {
+      a {
+        color: var(--main-white);
+        background: var(--ui-pink);
+        border-radius: 60px;
+      }
+    }
+
+    @include respond-to(575px, 2) {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  a {
+    color: inherit;
+    line-height: 1.2;
+    padding: 3px 22px 2px 22px;
+
+    &:hover,
+    &:focus {
+      background: var(--ui-pink);
+      border-radius: 60px;
+      color: var(--main-white);
+    }
+
+    &:active {
+      background: var(--ui-pink-active);
+      border-radius: 60px;
+      color: var(--main-white);
+    }
+
+    @include respond-to(575px, 2) {
+      display: block;
+      padding: 8px 22px 7px 22px;
+    }
+  }
+
+  @include respond-to(575px, 2) {
+    width: 100%;
+    order: 2;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.user-pic {
+  margin-left: 22px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  box-sizing: content-box;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    border: 3px solid var(--ui-purple);
+    width: 34px;
+    height: 34px;
+    outline: none;
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    object-fit: cover;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  @include respond-to(575px, 2) {
+    margin: 10px auto;
+    order: 1;
+    width: 100%;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  @include respond-to(575px, 2) {
+    margin: 10px auto;
+  }
+}
+
+.js-toggle-menu {
+  width: 30px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/icon-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: none;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+
+  @include respond-to(575px, 2) {
+    display: block;
+  }
+}
